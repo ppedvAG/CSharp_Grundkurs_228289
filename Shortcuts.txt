@@ -1,0 +1,10 @@
+Shortcuts
+Strg + K, Strg + C: Codeblöcke auskommentieren
+Strg + K, Strg + U: Codeblöcke einkommentieren
+Strg + R, Strg + R: Member umbenennen (Passt überall den Namen an)
+Strg + D: Kopiert die derzeitige Zeile
+Strg + K, Strg + D: Formatiert den Code
+Alt + Pfeil Hoch und Herunter: Die derzeitige Codezeile bewegen
+Alt + Ziehen: Multizeilencursor
+Strg + Leertaste: Vorschläge anzeigen
+Strg + .: Codeaktionen anzeigen
