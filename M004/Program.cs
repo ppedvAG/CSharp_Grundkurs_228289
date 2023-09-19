@@ -170,6 +170,10 @@ internal class Program
 	}
 }
 
+/// <summary>
+/// Wochentag ist eine Struktur, daher muss es außerhalb einer Funktion sein
+/// Im besten Fall in einem eigenen File
+/// </summary>
 enum Wochentag
 {
 	Mo = 1, Di, Mi, Do = 10, Fr, Sa, So
