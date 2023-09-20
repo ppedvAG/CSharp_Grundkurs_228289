@@ -20,5 +20,17 @@ internal class Program
 
         Console.WriteLine(p2.Gehalt);
 		//p2.Gehalt = 0;
-    }
+
+		Person p3 = new Person("Max", "Mustermann", 100000000);
+
+		//Assozation von Objekten
+		//Objekte zueinander referenzieren
+		Kurs k = new Kurs("C# Grundkurs", p1, p2, p3);
+
+		Person p4 = new Person("Max", "Muster");
+		k.AddTeilnehmer(p4);
+
+		Person p5 = new Person("Max", "Muster");
+		k.AddTeilnehmer(p5);
+	}
 }

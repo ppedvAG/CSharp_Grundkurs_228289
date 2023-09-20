@@ -92,6 +92,7 @@
 		///Wird benötigt für z.B.Bindings in WPF, Serialisierung in JSON, ...
 		///</summary>
 		public DateTime Geburtsdatum { get; set; }
+
 		//public DateTime Geburtsdatum;  //Selbiges wie oben im Bezug auf die Verwendung
 
 
@@ -101,5 +102,49 @@
 		//propdp: Dependency Property
 		//propa: Dependency Property mit separaten Get- und Set Methoden
 		#endregion
-	}
+
+		#region Konstruktor
+		/// <summary>
+		/// Standardkonstruktor explizit erstellen
+		/// </summary>
+		public Person()
+		{
+            Console.WriteLine("Person wird erstellt");
+            Console.WriteLine("Konstruktor 1");
+        }
+
+		/// <summary>
+		/// Konstruktor: Wird bei Objekterstellung ausgeführt und wird verwendet um Initialwerte zu setzen<br/>
+		/// Wenn ein Konstruktor angelegt wird, wird der Standardkonstruktor (Person()) entfernt
+		/// </summary>
+		public Person(string vorname, string nachname) : this()
+        {
+			this.vorname = vorname;
+			this.nachname = nachname;
+			Console.WriteLine("Konstruktor 2");
+		}
+
+		/// <summary>
+		/// Konstruktoren verketten mittels : this(Par1, Par2, ...)
+		/// Wenn dieser Konstruktor ausgeführt wird, wird auch der verkettete Konstruktor ausgeführt
+		/// Vorteile:
+		/// - Wenn sich der verkettete Konstruktor verändert, wird hier der Code automatisch angepasst
+		/// - Weniger Redundanz (kein Copy Paste)
+		/// </summary>
+		public Person(string vorname, string nachname, int gehalt) : this(vorname, nachname)
+		{
+			this.gehalt = gehalt;
+			Console.WriteLine("Konstruktor 3");
+		}
+
+		/// <summary>
+		/// Konstruktor mit optionalen Parametern<br/>
+		/// Ermöglicht, Konfiguration des Objekts
+		/// </summary>
+		//public Person(string vorname = "", string nachname = "", int gehalt = 0)
+		//{
+		//	//...
+		//}
+        #endregion
+    }
 }
