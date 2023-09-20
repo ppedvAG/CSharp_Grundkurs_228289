@@ -1,4 +1,4 @@
-﻿namespace M006.Data;
+﻿namespace M007;
 
 public class Person
 {
@@ -109,9 +109,10 @@ public class Person
 	/// </summary>
 	public Person()
 	{
-            Console.WriteLine("Person wird erstellt");
-            Console.WriteLine("Konstruktor 1");
-        }
+        Console.WriteLine("Person wird erstellt");
+        Console.WriteLine("Konstruktor 1");
+		Counter++;
+    }
 
 	/// <summary>
 	/// Konstruktor: Wird bei Objekterstellung ausgeführt und wird verwendet um Initialwerte zu setzen<br/>
@@ -146,4 +147,13 @@ public class Person
 	//	//...
 	//}
 	#endregion
+
+	public static int Counter { get; set; }
+
+	~Person()
+	{
+		//Destruktor: Wird ausgeführt, wenn das Objekt vom GC eingesammelt wird
+		//GetHashCode: Gibt die Speicheradresse des Objekts zurück
+		Console.WriteLine($"Die Person wurde eingesammelt {GetHashCode()}");
+	}
 }
