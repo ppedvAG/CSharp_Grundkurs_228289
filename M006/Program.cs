@@ -1,7 +1,7 @@
 ﻿using M006.Data;
-using System.Diagnostics;
+using System.Diagnostics; //Andere Member importieren
 
-namespace M006;
+namespace M006; //In welchen Namespace befinden sich die Member in diesem File?
 
 internal class Program
 {
