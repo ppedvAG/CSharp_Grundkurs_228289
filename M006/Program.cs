@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using M006.Data;
+using System.Diagnostics;
 
 namespace M006;
 
@@ -32,5 +33,13 @@ internal class Program
 
 		Person p5 = new Person("Max", "Muster");
 		k.AddTeilnehmer(p5);
+
+		//Durch using System.Diagnostics die Stopwatch importieren
+		Stopwatch sw = new Stopwatch();
+
+		//System: Console, int, double, string
+		//System.IO: File, Directory, Path
+		//System.Net.Http: HttpClient, HttpStatusCodes
+		//System.Text.Json: JsonSerializer, JsonDocument
 	}
 }
