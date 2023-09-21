@@ -39,9 +39,11 @@ internal class Program
 		IEnumerable<KeyValuePair<int, int>> ze = new Dictionary<int, int>();
 	}
 
-	public static void PrintList<T>(IEnumerable<T> a)
+	public static IEnumerable<T> PrintList<T>(IEnumerable<T> a)
 	{
-
+		return new T[10];
+		return new List<T>();
+		//return new Dictionary<T, T>();
 	}
 }
 
