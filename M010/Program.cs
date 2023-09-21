@@ -31,6 +31,12 @@ internal class Program
 		PrintList(x);
 		PrintList(y);
 		PrintList(z); //Hier passen alle 3 Listen hinein
+
+		//IEnumerable ist hier der gemeinsame Basistyp
+		//-> Ein Paramter/Rückgabetyp/Variable vom Typ IEnumerable kann ein Array, eine List oder ein Dict halten
+		IEnumerable<int> xe = new int[10];
+		IEnumerable<int> ye = new List<int>();
+		IEnumerable<KeyValuePair<int, int>> ze = new Dictionary<int, int>();
 	}
 
 	public static void PrintList<T>(IEnumerable<T> a)
